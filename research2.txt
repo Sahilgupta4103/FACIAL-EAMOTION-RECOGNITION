@@ -1,0 +1,41 @@
+Facial emotion recoginition :
+using ck+ dataset- 58454 (trainnig)  + 7066 (testing) = 65520 images
+emotions - angry,disgust,fear,happy,neutral,sad,surprise.
+
+=>used Fully connected Neural network
+-> 4 CNN layers
+->Flatten 
+-> 3 Fully connected layer
+epochs = 20
+accuracy = 91.3%
+
+
+=>used Bidirectional LSTM layer
+-> 4 CNN layers
+->Flatten 
+-> 3 Bidirectional LSTM layer
+epochs = 23 after  it:
+ReduceLROnPlateau reducing learning rate to 0.00020000000949949026.
+Epoch 00023: early stopping
+accuracy = 85.5%
+
+=>used fully connected + Bidirectional LSTM layer
+-> 4 CNN layers
+->Flatten 
+->2 fully connected layer
+-> 1 Bidirectional LSTM layer
+->1 fully connected layer
+epochs = 25
+accuracy = 93.6%
+
+=>used fully connected + Multiple player of Bidirectional LSTM layer
+-> 4 CNN layers
+->Flatten 
+->2 fully connected layer
+->3 Bidirectional LSTM layer
+->1 fully connected layer
+epochs = 25
+accuracy = 89.1%
+Restoring model weights from the end of the best epoch.
+Epoch 00020: ReduceLROnPlateau reducing learning rate to 0.00020000000949949026.
+Epoch 00020: early stopping
